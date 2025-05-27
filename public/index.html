@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Totally Rights Agency - Project Quote</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Totally Rights Agency</h1>
+            <p>Project Quote & Plan</p>
+        </header>
+        <main>
+            <section class="quote-html">
+                <h2>Project Quote</h2>
+                <p><strong>Rate:</strong> €50/hour</p>
+                <p>This document outlines the project quote and plan for the development of a web app platform for Totally Rights Agency.</p>
+                <h3>Project Overview</h3>
+                <p>This project aims to create a comprehensive and user-friendly web application tailored for Totally Rights Agency, facilitating efficient management of neighbouring rights and related processes. The platform will automate tasks, ensure data accuracy, and improve overall workflow.</p>
+                <h3>📦 Scope Summary</h3>
+                <ul>
+                    <li><strong>Authentication & Registration:</strong> Email/password login, role selection, personal info fields, dynamic contract PDF preview & generation.</li>
+                    <li><strong>FTP Folder Structure:</strong> Aruba FTP integration, folder creation on registration, upload of contract & future CSV files.</li>
+                    <li><strong>User Dashboards:</strong> Separate interfaces (Producers / AIE), playlist display, role selection, "Deliver" function.</li>
+                    <li><strong>Admin Dashboard:</strong> User approval/rejection flow, contract access, CSV download, log of submissions.</li>
+                    <li><strong>Email Notifications:</strong> Email updates on approval status, submission confirmations.</li>
+                    <li><strong>CSV Generation:</strong> Generation of catalog + update CSVs upon submission; stored in FTP folder.</li>
+                    <li><strong>Frontend UI:</strong> React + Tailwind UI development for all pages (dashboards, static pages, forms).</li>
+                    <li><strong>Static Pages:</strong> Homepage, How It Works, Services, About, Contact.</li>
+                    <li><strong>Testing & Deployment:</strong> Bug fixing, QA testing, and final deployment on Vercel or chosen server.</li>
+                </ul>
+                <h3>🕒 Hour Breakdown (approximate)</h3>
+                <table class="quote-table">
+                    <thead>
+                        <tr><th>Task</th><th>Est. Hours</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Backend: Auth, Role Logic, SQLite setup</td><td>20–25</td></tr>
+                        <tr><td>Backend: FTP Integration</td><td>10–15</td></tr>
+                        <tr><td>CSV Generation + Admin Panel</td><td>15–20</td></tr>
+                        <tr><td>Nodemailer + Aruba SMTP</td><td>4–6</td></tr>
+                        <tr><td>Frontend Dashboards</td><td>20–25</td></tr>
+                        <tr><td>Static Pages + Routing</td><td>10–12</td></tr>
+                        <tr><td>Contract PDF logic</td><td>8–10</td></tr>
+                        <tr><td>Setup & Deployment</td><td>5–8</td></tr>
+                        <tr><td>QA Testing</td><td>6–10</td></tr>
+                    </tbody>
+                    <tfoot>
+                        <tr><th>Total Estimate</th><th>110–140</th></tr>
+                    </tfoot>
+                </table>
+                <h3>💰 Final Price Range</h3>
+                <p><strong>€5,500 – €7,000 EUR</strong> (Based on €50/hour @ 110–140 hours)</p>
+                <h3>📆 Milestone-Based Payment Plan</h3>
+                <table class="quote-table">
+                    <thead>
+                        <tr><th>Milestone</th><th>Deliverable</th><th>Est. Hours</th><th>Payment (€)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1. Auth & Registration</td><td>User flow, contract PDF system</td><td>25</td><td>€1,250</td></tr>
+                        <tr><td>2. FTP + Dashboards</td><td>Folder setup + React UI</td><td>30</td><td>€1,500</td></tr>
+                        <tr><td>3. Admin Panel & CSV</td><td>Admin access, CSV generation, email logic</td><td>30</td><td>€1,500</td></tr>
+                        <tr><td>4. UI & Static Pages</td><td>Remaining UI, public pages</td><td>25</td><td>€1,250</td></tr>
+                        <tr><td>5. Testing & Deployment</td><td>QA, launch</td><td>10</td><td>€500</td></tr>
+                    </tbody>
+                    <tfoot>
+                        <tr><th colspan="2">TOTAL</th><th>120</th><th>€6,000</th></tr>
+                    </tfoot>
+                </table>
+                <h3>📅 Maintenance & Support</h3>
+                <ul>
+                    <li>€45/ora ad hoc</li>
+                    <li>or €300/month for up to 8 hours support/updates</li>
+                </ul>
+                <p><strong>Estimated Timeline:</strong> 4–6 weeks</p>
+                <p><strong>Date:</strong> 27 Maggio, 2025</p>
+            </section>
+        </main>
+        <section class="timeline-app" hidden>
+            <h2>Project Timeline & Milestones</h2>
+            <div id="timelineList" class="timeline-list">
+                <!-- Timeline items will be rendered here -->
+            </div>
+        </section>
+        <section class="feedback-app" hidden>
+            <div class="feedback-app__container">
+                <div class="feedback-app__form-panel">
+                    <h2>Give feedback</h2>
+                    <form id="feedbackForm" autocomplete="off">
+                        <input type="text" id="feedbackTitle" placeholder="Title" required maxlength="80" />
+                        <textarea id="feedbackDescription" placeholder="Description of the idea" required maxlength="500"></textarea>
+                        <div class="feedback-app__form-footer">
+                            <input type="text" id="feedbackName" placeholder="Your name (optional)" maxlength="40" />
+                            <input type="email" id="feedbackEmail" placeholder="Email (optional)" maxlength="80" />
+                        </div>
+                        <div class="feedback-app__form-actions">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="feedback-app__list-panel">
+                    <h2>Feedback Board</h2>
+                    <div id="feedbackList" class="feedback-list">
+                        <!-- Feedback items will be rendered here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer hidden></footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
